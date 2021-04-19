@@ -1,4 +1,4 @@
-[gd_scene load_steps=208 format=2]
+[gd_scene load_steps=220 format=2]
 
 [ext_resource path="res://main/at12/sprite_14.png" type="Texture" id=1]
 [ext_resource path="res://main/at12/sprite_10.png" type="Texture" id=2]
@@ -201,6 +201,17 @@
 [ext_resource path="res://main/idle_per/sprite_02.png" type="Texture" id=199]
 [ext_resource path="res://main.gd" type="Script" id=200]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=201]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_7.png" type="Texture" id=202]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_0.png" type="Texture" id=203]
+[ext_resource path="res://pantalla principal/sprite_05.png" type="Texture" id=204]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_4.png" type="Texture" id=205]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_1.png" type="Texture" id=206]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_5.png" type="Texture" id=207]
+[ext_resource path="res://pantalla principal/Free Buttons/Free Buttons/blue/play.png" type="Texture" id=208]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_2.png" type="Texture" id=209]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_3.png" type="Texture" id=210]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_6.png" type="Texture" id=211]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_8.png" type="Texture" id=212]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 17.846, 20.9064 )
@@ -234,11 +245,6 @@ animations = [ {
 "name": "attack_3",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 191 ), ExtResource( 193 ), ExtResource( 192 ), ExtResource( 67 ), ExtResource( 108 ), ExtResource( 115 ), ExtResource( 104 ), ExtResource( 81 ), ExtResource( 69 ), ExtResource( 68 ), ExtResource( 105 ), ExtResource( 94 ), ExtResource( 83 ), ExtResource( 109 ), ExtResource( 85 ), ExtResource( 90 ), ExtResource( 92 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 93 ), ExtResource( 117 ), ExtResource( 80 ), ExtResource( 91 ), ExtResource( 76 ), ExtResource( 96 ) ],
-"loop": true,
-"name": "idle_escalando",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 170 ), ExtResource( 147 ), ExtResource( 157 ), ExtResource( 187 ), ExtResource( 129 ), ExtResource( 172 ), ExtResource( 132 ), ExtResource( 130 ), ExtResource( 136 ), ExtResource( 173 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 158 ), ExtResource( 138 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 146 ), ExtResource( 196 ), ExtResource( 195 ), ExtResource( 194 ) ],
 "loop": true,
 "name": "volte",
@@ -254,19 +260,24 @@ animations = [ {
 "name": "attack_1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 82 ), ExtResource( 87 ), ExtResource( 110 ), ExtResource( 114 ), ExtResource( 103 ), ExtResource( 116 ), ExtResource( 118 ), ExtResource( 122 ) ],
-"loop": true,
-"name": "flying",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 150 ), ExtResource( 44 ), ExtResource( 39 ), ExtResource( 168 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "attack_2",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 82 ), ExtResource( 87 ), ExtResource( 110 ), ExtResource( 114 ), ExtResource( 103 ), ExtResource( 116 ), ExtResource( 118 ), ExtResource( 122 ) ],
+"loop": true,
+"name": "flying",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 100 ), ExtResource( 95 ), ExtResource( 78 ), ExtResource( 72 ), ExtResource( 102 ), ExtResource( 106 ), ExtResource( 79 ), ExtResource( 99 ), ExtResource( 84 ), ExtResource( 77 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 191 ), ExtResource( 193 ), ExtResource( 192 ), ExtResource( 67 ), ExtResource( 108 ), ExtResource( 115 ), ExtResource( 104 ), ExtResource( 81 ), ExtResource( 69 ), ExtResource( 68 ), ExtResource( 105 ), ExtResource( 94 ), ExtResource( 83 ), ExtResource( 109 ), ExtResource( 85 ), ExtResource( 90 ), ExtResource( 92 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 93 ), ExtResource( 117 ), ExtResource( 80 ), ExtResource( 91 ), ExtResource( 76 ), ExtResource( 96 ) ],
+"loop": true,
+"name": "idle_escalando",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 165 ), ExtResource( 152 ), ExtResource( 188 ), ExtResource( 135 ), ExtResource( 153 ), ExtResource( 163 ), ExtResource( 141 ), ExtResource( 159 ), ExtResource( 131 ), ExtResource( 179 ), ExtResource( 145 ), ExtResource( 177 ), ExtResource( 189 ), ExtResource( 139 ), ExtResource( 161 ), ExtResource( 144 ), ExtResource( 154 ), ExtResource( 178 ), ExtResource( 181 ), ExtResource( 174 ), ExtResource( 183 ), ExtResource( 169 ), ExtResource( 151 ), ExtResource( 175 ), ExtResource( 155 ), ExtResource( 149 ), ExtResource( 127 ), ExtResource( 166 ), ExtResource( 185 ), ExtResource( 186 ), ExtResource( 160 ), ExtResource( 190 ), ExtResource( 128 ), ExtResource( 184 ), ExtResource( 140 ), ExtResource( 148 ), ExtResource( 180 ), ExtResource( 167 ), ExtResource( 162 ), ExtResource( 176 ) ],
@@ -275,10 +286,19 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 203 ), ExtResource( 206 ), ExtResource( 209 ), ExtResource( 210 ), ExtResource( 205 ), ExtResource( 207 ), ExtResource( 211 ), ExtResource( 202 ), ExtResource( 212 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [node name="main" type="Node"]
 script = ExtResource( 200 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+visible = false
 script = ExtResource( 201 )
 
 [node name="left" type="RayCast2D" parent="KinematicBody2D"]
@@ -363,8 +383,55 @@ position = Vector2( 162.167, -32.63 )
 scale = Vector2( 0.731884, 0.707792 )
 frames = SubResource( 6 )
 animation = "idle"
-frame = 16
+frame = 10
 speed_scale = 1.5
+playing = true
+
+[node name="Pantalla d\'inici" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pantalla d\'inici"]
+anchor_left = -0.672
+anchor_top = -2.828
+anchor_right = 0.5
+anchor_bottom = -2.328
+margin_left = 0.00994492
+margin_top = -0.0170975
+margin_right = 2.12994
+margin_bottom = 19.9829
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="Pantalla d\'inici/VBoxContainer"]
+margin_right = 49.0
+margin_bottom = 20.0
+texture_normal = ExtResource( 208 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Pantalla d\'inici"]
+show_behind_parent = true
+anchor_left = -10.032
+anchor_top = -15.286
+anchor_right = 10.543
+anchor_bottom = -0.236
+margin_left = 0.013916
+margin_top = -0.0065918
+margin_right = 0.0138855
+margin_bottom = -0.0065937
+texture = ExtResource( 204 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="titol" type="AnimatedSprite" parent="Pantalla d\'inici"]
+position = Vector2( 39.6561, -443.249 )
+scale = Vector2( 0.774726, 0.653476 )
+frames = SubResource( 7 )
+frame = 5
 playing = true
 [connection signal="area_entered" from="KinematicBody2D/hitbox_main" to="." method="_on_hitbox_main_area_entered"]
 [connection signal="animation_finished" from="KinematicBody2D/main_char" to="." method="_on_main_char_animation_finished"]
