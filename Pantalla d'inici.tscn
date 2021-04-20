@@ -6,7 +6,7 @@
 [ext_resource path="res://pantalla principal/New_Piskel.png" type="Texture" id=4]
 [ext_resource path="res://pantalla principal/self_title_1_2/nom_2.png" type="Texture" id=5]
 [ext_resource path="res://pantalla principal/self_title_1_2/nom_0.png" type="Texture" id=6]
-[ext_resource path="res://pantalla principal/Free Buttons/Free Buttons/blue/play.png" type="Texture" id=7]
+[ext_resource path="res://pantalla principal/New_Piskel_1.png" type="Texture" id=7]
 [ext_resource path="res://pantalla principal/self_title_1_2/nom_1.png" type="Texture" id=8]
 [ext_resource path="res://pantalla principal/self_title_1_2/nom_5.png" type="Texture" id=9]
 [ext_resource path="res://pantalla principal/sprite_05.png" type="Texture" id=10]
@@ -22,33 +22,30 @@ animations = [ {
 } ]
 
 [node name="Pantalla d\'inici" type="Control"]
-anchor_left = -0.392
-anchor_top = -1.014
-anchor_right = 0.412
-anchor_bottom = -0.011
-margin_left = 401.408
-margin_top = 608.4
-margin_right = -381.888
-margin_bottom = 46.6
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="area_opcions" type="VBoxContainer" parent="."]
-anchor_left = -1.975
-anchor_top = -6.15
-anchor_right = 2.4
-anchor_bottom = -2.328
-margin_left = 7.62939e-06
-margin_bottom = 20.12
+anchor_left = 0.419
+anchor_top = 0.625
+anchor_right = 0.586
+anchor_bottom = 0.718
+margin_left = -29.056
+margin_top = -75.0
+margin_right = 389.936
+margin_bottom = 322.2
+rect_scale = Vector2( 0.5, 0.5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="play" type="TextureButton" parent="area_opcions"]
-margin_right = 175.0
-margin_bottom = 20.0
-rect_scale = Vector2( 3, 3 )
+margin_right = 590.0
+margin_bottom = 453.0
+action_mode = 0
 texture_normal = ExtResource( 7 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
@@ -57,10 +54,10 @@ anchor_left = -10.032
 anchor_top = -15.286
 anchor_right = 10.543
 anchor_bottom = -0.236
-margin_left = 0.013916
-margin_top = 2.99011
-margin_right = 0.0138855
-margin_bottom = 2.99011
+margin_left = 10272.8
+margin_top = 9171.6
+margin_right = -9772.03
+margin_bottom = 741.6
 texture = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true,
@@ -68,10 +65,10 @@ __meta__ = {
 }
 
 [node name="titol" type="AnimatedSprite" parent="."]
-position = Vector2( 51.1274, -454.263 )
+position = Vector2( 550, 165 )
 scale = Vector2( 1.23961, 1.3192 )
 frames = SubResource( 1 )
-frame = 8
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -79,7 +76,7 @@ __meta__ = {
 
 [node name="sombra" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( 6.27514, -414.975 )
+position = Vector2( 500, 200 )
 scale = Vector2( 1.22884, 1.39018 )
 texture = ExtResource( 4 )
 __meta__ = {
@@ -87,6 +84,5 @@ __meta__ = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 12, -305.683 )
+position = Vector2( 514.863, 300.447 )
 current = true
-zoom = Vector2( 0.8, 1 )
