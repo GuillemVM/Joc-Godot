@@ -253,24 +253,24 @@ animations = [ {
 "name": "volte",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 43 ), ExtResource( 47 ), ExtResource( 54 ), ExtResource( 51 ), ExtResource( 49 ), ExtResource( 19 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 64 ), ExtResource( 48 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 121 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 24 ), ExtResource( 56 ), ExtResource( 1 ), ExtResource( 44 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 59 ), ExtResource( 20 ), ExtResource( 33 ), ExtResource( 28 ), ExtResource( 13 ), ExtResource( 31 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 9 ), ExtResource( 30 ), ExtResource( 50 ), ExtResource( 6 ), ExtResource( 42 ), ExtResource( 39 ), ExtResource( 38 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "idle_escalando",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 65 ), ExtResource( 69 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 60 ), ExtResource( 181 ), ExtResource( 186 ), ExtResource( 192 ), ExtResource( 148 ), ExtResource( 177 ), ExtResource( 150 ), ExtResource( 146 ), ExtResource( 182 ), ExtResource( 176 ), ExtResource( 170 ) ],
+"frames": [ ExtResource( 43 ), ExtResource( 47 ), ExtResource( 54 ), ExtResource( 51 ), ExtResource( 49 ), ExtResource( 19 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 64 ), ExtResource( 48 ) ],
 "loop": true,
-"name": "attack_1",
+"name": "walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 63 ), ExtResource( 29 ), ExtResource( 57 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 70 ) ],
 "loop": true,
 "name": "flying",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 65 ), ExtResource( 69 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 60 ), ExtResource( 181 ), ExtResource( 186 ), ExtResource( 192 ), ExtResource( 148 ), ExtResource( 177 ), ExtResource( 150 ), ExtResource( 146 ), ExtResource( 182 ), ExtResource( 176 ), ExtResource( 170 ) ],
+"loop": true,
+"name": "attack_1",
 "speed": 5.0
 } ]
 

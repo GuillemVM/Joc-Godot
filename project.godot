@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Joc- Godot"
+run/main_scene="res://Pantalla d'inici.tscn"
 config/icon="res://icon.png"
 
 [input]
