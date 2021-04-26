@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://pantalla principal/self_title_1_2/nom_8.png" type="Texture" id=1]
 [ext_resource path="res://pantalla principal/self_title_1_2/nom_7.png" type="Texture" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://pantalla principal/sprite_05.png" type="Texture" id=10]
 [ext_resource path="res://pantalla principal/self_title_1_2/nom_4.png" type="Texture" id=11]
 [ext_resource path="res://pantalla principal/self_title_1_2/nom_6.png" type="Texture" id=12]
+[ext_resource path="res://escena_principal.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Pantalla d'inici.gd" type="Script" id=14]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -24,9 +26,11 @@ animations = [ {
 [node name="Pantalla d\'inici" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+scn_game = ExtResource( 13 )
 
 [node name="area_opcions" type="VBoxContainer" parent="."]
 anchor_left = 0.419
@@ -68,7 +72,7 @@ __meta__ = {
 position = Vector2( 550, 165 )
 scale = Vector2( 1.23961, 1.3192 )
 frames = SubResource( 1 )
-frame = 1
+frame = 6
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -86,3 +90,4 @@ __meta__ = {
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 514.863, 300.447 )
 current = true
+[connection signal="pressed" from="area_opcions/play" to="." method="_on_play_pressed"]

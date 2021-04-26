@@ -1,44 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://main_node.gd" type="Script" id=1]
-[ext_resource path="res://Pantalla d'inici.gd" type="Script" id=2]
-[ext_resource path="res://escena_principal.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Pantalla d'inici.tscn" type="PackedScene" id=4]
 
 [node name="main" type="Node"]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
-
-[node name="Pantalla d\'inici" parent="." instance=ExtResource( 4 )]
-script = ExtResource( 2 )
-scn_game = ExtResource( 3 )
-
-[node name="area_opcions" parent="Pantalla d\'inici" index="0"]
-anchor_left = 0.422
-anchor_top = 0.613
-anchor_right = 0.589
-anchor_bottom = 0.72
-margin_left = -32.128
-margin_top = -67.8
-margin_right = 478.864
-margin_bottom = 515.0
-
-[node name="play" parent="Pantalla d\'inici/area_opcions" index="0"]
-margin_right = 682.0
-toggle_mode = false
-pressed = false
-action_mode = 0
-button_mask = 2
-
-[node name="Camera2D" parent="Pantalla d\'inici" index="4"]
-position = Vector2( 518.507, 297.515 )
-current = false
-
-[node name="escena_principal" parent="." instance=ExtResource( 3 )]
-[connection signal="pressed" from="Pantalla d'inici/area_opcions/play" to="Pantalla d'inici" method="_on_play_pressed"]
-
-[editable path="Pantalla d'inici"]
-
-[editable path="escena_principal"]
