@@ -1,0 +1,93 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_8.png" type="Texture" id=1]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_7.png" type="Texture" id=2]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_3.png" type="Texture" id=3]
+[ext_resource path="res://pantalla principal/New_Piskel.png" type="Texture" id=4]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_2.png" type="Texture" id=5]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_0.png" type="Texture" id=6]
+[ext_resource path="res://pantalla principal/New_Piskel_1.png" type="Texture" id=7]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_1.png" type="Texture" id=8]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_5.png" type="Texture" id=9]
+[ext_resource path="res://pantalla principal/sprite_05.png" type="Texture" id=10]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_4.png" type="Texture" id=11]
+[ext_resource path="res://pantalla principal/self_title_1_2/nom_6.png" type="Texture" id=12]
+[ext_resource path="res://escena_principal.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Pantalla d'inici.gd" type="Script" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Pantalla d\'inici" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scn_game = ExtResource( 13 )
+
+[node name="area_opcions" type="VBoxContainer" parent="."]
+anchor_left = 0.419
+anchor_top = 0.625
+anchor_right = 0.586
+anchor_bottom = 0.718
+margin_left = -29.056
+margin_top = -75.0
+margin_right = 389.936
+margin_bottom = 322.2
+rect_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="play" type="TextureButton" parent="area_opcions"]
+margin_right = 590.0
+margin_bottom = 453.0
+action_mode = 0
+texture_normal = ExtResource( 7 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+show_behind_parent = true
+anchor_left = -10.032
+anchor_top = -15.286
+anchor_right = 10.543
+anchor_bottom = -0.236
+margin_left = 10272.8
+margin_top = 9171.6
+margin_right = -9772.03
+margin_bottom = 741.6
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="titol" type="AnimatedSprite" parent="."]
+position = Vector2( 550, 165 )
+scale = Vector2( 1.23961, 1.3192 )
+frames = SubResource( 1 )
+frame = 6
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="sombra" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 500, 200 )
+scale = Vector2( 1.22884, 1.39018 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 514.863, 300.447 )
+current = true
+[connection signal="pressed" from="area_opcions/play" to="." method="_on_play_pressed"]

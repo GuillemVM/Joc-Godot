@@ -1,0 +1,9 @@
+extends Control
+
+export (PackedScene) var scn_game
+func _ready():
+	$main_cam.current = false
+
+func _on_play_pressed():
+	get_tree().change_scene_to(scn_game)
+	queue_free()
