@@ -23,7 +23,10 @@ func _physics_process(delta):
 			grounded = false
 		moviment.y += gravity
 		if attacking == false:
-			moviment.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+			if Input.get_action_strength("ui_right"):
+				moviment.x = velocity
+			if Input.get_action_strength("ui_left"):
+				moviment.x = -velocity
 			if grounded == true && Input.is_action_pressed("ui_up"):
 				moviment.y = jump
 			elif grounded == false && moviment.y < 0:

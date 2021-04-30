@@ -6,9 +6,8 @@
 [node name="escena_principal" type="Node"]
 script = ExtResource( 1 )
 
-[node name="main_cam" type="Camera2D" parent="."]
-position = Vector2( 1144.9, -290.44 )
-current = true
-
 [node name="personatge" parent="." instance=ExtResource( 2 )]
-position = Vector2( 978.767, -251.574 )
+position = Vector2( 0.490143, 0.418459 )
+
+[node name="main_cam" type="Camera2D" parent="personatge"]
+current = true

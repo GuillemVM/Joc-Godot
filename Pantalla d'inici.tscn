@@ -12,7 +12,7 @@
 [ext_resource path="res://pantalla principal/sprite_05.png" type="Texture" id=10]
 [ext_resource path="res://pantalla principal/self_title_1_2/nom_4.png" type="Texture" id=11]
 [ext_resource path="res://pantalla principal/self_title_1_2/nom_6.png" type="Texture" id=12]
-[ext_resource path="res://escena_principal.tscn" type="PackedScene" id=13]
+[ext_resource path="res://main_node.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Pantalla d'inici.gd" type="Script" id=14]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -72,7 +72,7 @@ __meta__ = {
 position = Vector2( 550, 165 )
 scale = Vector2( 1.23961, 1.3192 )
 frames = SubResource( 1 )
-frame = 6
+frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -88,6 +88,6 @@ __meta__ = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 514.863, 300.447 )
+position = Vector2( 511.499, 300 )
 current = true
 [connection signal="pressed" from="area_opcions/play" to="." method="_on_play_pressed"]

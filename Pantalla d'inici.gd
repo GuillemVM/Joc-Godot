@@ -2,7 +2,7 @@ extends Control
 
 export (PackedScene) var scn_game
 func _ready():
-	$main_cam.current = false
+	pass
 
 func _on_play_pressed():
 	get_tree().change_scene_to(scn_game)
