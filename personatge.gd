@@ -4,7 +4,7 @@ onready var _animated_player = $main_char
 
 const gravity = 10
 const up = Vector2(0, -1)
-const jump = -200
+const jump = -250
 const velocity = 100
 
 var moviment = Vector2()
@@ -12,19 +12,24 @@ var attacking = false
 var death = false
 var direction = 1
 var grounded
+var attack_1 = true
 var attack_2 = false
 var attack_3 = false
+var q_ready = true
 
 func _ready():
 	pass
 func _physics_process(delta):
 	if death == false:
+# identificar si esta en contacte amb el terra
 		if is_on_floor():
 			grounded = true
 		else:
 			grounded = false
+# variacio moviments
 		moviment.y += gravity
 		moviment.x = 0
+# controls de moviment
 		if attacking == false:
 			if Input.is_action_pressed("ui_right"):
 				moviment.x = velocity
@@ -47,6 +52,7 @@ func _physics_process(delta):
 			elif moviment.x == 0:
 				if grounded == true:
 					_animated_player.play("idle")
+# hitbox
 		if direction == 1:
 			$hitbox_main/left.disabled = true
 			$hitbox_main/right.disabled = false
@@ -57,59 +63,42 @@ func _physics_process(delta):
 			$hitbox_main/right.disabled = true
 			$left.enabled = true
 			$right.enabled = false
-		if Input.is_action_just_pressed("attack") && grounded == true:
-			attacking = true
-			_animated_player.play("attack_1")
-			if direction == 1:
-				$hitbox_attack_1/left.disabled = true
-				$hitbox_attack_1/right.disabled = false
-			elif direction == -1:
-				$hitbox_attack_1/left.disabled = false
-				$hitbox_attack_1/right.disabled = true
-		if _animated_player.animation == "attack_1":
-			if Input.is_action_just_pressed("attack"):
-				attack_2 = true
-			else:
-				pass
-		if _animated_player.animation == "attack_2":
-			if Input.is_action_just_pressed("attack"):
-				attack_3 = true
-			else:
-				pass
+#controls attack
+		if q_ready == true:
+			if Input.get_action_strength("attack") && grounded == true:
+				attacking = true
+				if attack_1 == true:
+					first_attack()
+					q_ready = false
+					attack_1 = false
+				elif attack_1 == false:
+					if _animated_player.animation == "attack_1":
+						attack_2 = true
+						q_ready = false
+					if _animated_player.animation == "attack_2":
+						attack_3 = true
+						q_ready = false
 		moviment = move_and_slide(moviment, up)
 	elif death == true:
 		pass
 
 func _on_main_char_animation_finished():
+#primer atac
 	if _animated_player.animation == "attack_1":
 		if direction == 1:
 			$hitbox_attack_1/right.disabled = true
 		elif direction == -1:
 			$hitbox_attack_1/left.disabled = true
-		if attack_2 == true:
-			_animated_player.play("attack_2")
-			if direction == 1:
-				$hitbox_attack_2/right.disabled = false
-			if direction == -1:
-				$hitbox_attack_2/left.disabled = false
-		else:
-			_animated_player.play("idle")
-			attacking = false
+		second_attack()
+#segon atac
 	if _animated_player.animation == "attack_2":
 		attack_2 = false
 		if direction == 1:
 			$hitbox_attack_2/right.disabled = true
 		if direction == -1:
 			$hitbox_attack_2/left.disabled = true
-		if attack_3 == true:
-			_animated_player.play("attack_3")
-			if direction == 1:
-				$hitbox_attack_3/right.disabled = false
-			if direction == -1:
-				$hitbox_attack_3/left.disabled = false
-		else:
-			_animated_player.play("idle")
-			attacking = false
+		third_attack()
+# tercer atac
 	if _animated_player.animation == "attack_3":
 		attack_3 = false
 		if direction == 1:
@@ -118,6 +107,40 @@ func _on_main_char_animation_finished():
 			$hitbox_attack_3/left.disabled = true
 		_animated_player.play("idle")
 		attacking = false
+		attack_1 = true
 
 func _on_hitbox_main_area_entered(area):
 	pass
+
+func first_attack():
+	_animated_player.play("attack_1")
+	if direction == 1:
+		$hitbox_attack_1/left.disabled = true
+		$hitbox_attack_1/right.disabled = false
+	elif direction == -1:
+		$hitbox_attack_1/left.disabled = false
+		$hitbox_attack_1/right.disabled = true
+
+func second_attack():
+	if attack_2 == true:
+		_animated_player.play("attack_2")
+		if direction == 1:
+			$hitbox_attack_2/right.disabled = false
+		if direction == -1:
+			$hitbox_attack_2/left.disabled = false
+	elif attack_2 == false:
+		_animated_player.play("idle")
+		attacking = false
+		attack_1 = true
+
+func third_attack():
+	if attack_3 == true:
+		_animated_player.play("attack_3")
+		if direction == 1:
+			$hitbox_attack_3/right.disabled = false
+		if direction == -1:
+			$hitbox_attack_3/left.disabled = false
+	elif attack_3 == false:
+		_animated_player.play("idle")
+		attacking = false
+		attack_1 = true

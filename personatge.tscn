@@ -223,34 +223,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 48 ), ExtResource( 109 ), ExtResource( 108 ), ExtResource( 50 ), ExtResource( 24 ), ExtResource( 5 ), ExtResource( 44 ), ExtResource( 104 ), ExtResource( 49 ) ],
+"frames": [ ExtResource( 114 ), ExtResource( 64 ), ExtResource( 88 ), ExtResource( 113 ), ExtResource( 74 ), ExtResource( 175 ), ExtResource( 188 ), ExtResource( 200 ), ExtResource( 146 ), ExtResource( 157 ), ExtResource( 174 ), ExtResource( 159 ), ExtResource( 179 ), ExtResource( 135 ), ExtResource( 155 ) ],
 "loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 54 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 41 ), ExtResource( 21 ), ExtResource( 40 ), ExtResource( 38 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "baixant",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 111 ), ExtResource( 62 ), ExtResource( 102 ), ExtResource( 93 ), ExtResource( 84 ), ExtResource( 180 ), ExtResource( 90 ), ExtResource( 55 ), ExtResource( 136 ), ExtResource( 167 ), ExtResource( 75 ), ExtResource( 61 ), ExtResource( 56 ), ExtResource( 92 ), ExtResource( 72 ), ExtResource( 60 ), ExtResource( 52 ), ExtResource( 184 ), ExtResource( 162 ), ExtResource( 150 ) ],
-"loop": true,
-"name": "volte",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 165 ), ExtResource( 181 ), ExtResource( 185 ), ExtResource( 3 ), ExtResource( 82 ), ExtResource( 36 ), ExtResource( 8 ), ExtResource( 20 ), ExtResource( 35 ), ExtResource( 100 ), ExtResource( 14 ), ExtResource( 28 ), ExtResource( 31 ), ExtResource( 25 ), ExtResource( 30 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 42 ), ExtResource( 29 ), ExtResource( 51 ), ExtResource( 16 ), ExtResource( 7 ), ExtResource( 43 ), ExtResource( 33 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "idle_escalando",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 94 ), ExtResource( 23 ), ExtResource( 112 ), ExtResource( 10 ), ExtResource( 45 ), ExtResource( 15 ), ExtResource( 34 ), ExtResource( 95 ) ],
-"loop": true,
-"name": "flying",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 97 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 83 ), ExtResource( 2 ), ExtResource( 39 ), ExtResource( 46 ) ],
-"loop": true,
-"name": "fall",
+"name": "attack_1",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 152 ), ExtResource( 128 ), ExtResource( 144 ), ExtResource( 173 ), ExtResource( 160 ), ExtResource( 57 ), ExtResource( 190 ), ExtResource( 133 ), ExtResource( 66 ), ExtResource( 166 ) ],
@@ -268,9 +243,34 @@ animations = [ {
 "name": "attack_3",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 114 ), ExtResource( 64 ), ExtResource( 88 ), ExtResource( 113 ), ExtResource( 74 ), ExtResource( 175 ), ExtResource( 188 ), ExtResource( 200 ), ExtResource( 146 ), ExtResource( 157 ), ExtResource( 174 ), ExtResource( 159 ), ExtResource( 179 ), ExtResource( 135 ), ExtResource( 155 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 48 ), ExtResource( 109 ), ExtResource( 108 ), ExtResource( 50 ), ExtResource( 24 ), ExtResource( 5 ), ExtResource( 44 ), ExtResource( 104 ), ExtResource( 49 ) ],
 "loop": true,
-"name": "attack_1",
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 165 ), ExtResource( 181 ), ExtResource( 185 ), ExtResource( 3 ), ExtResource( 82 ), ExtResource( 36 ), ExtResource( 8 ), ExtResource( 20 ), ExtResource( 35 ), ExtResource( 100 ), ExtResource( 14 ), ExtResource( 28 ), ExtResource( 31 ), ExtResource( 25 ), ExtResource( 30 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 42 ), ExtResource( 29 ), ExtResource( 51 ), ExtResource( 16 ), ExtResource( 7 ), ExtResource( 43 ), ExtResource( 33 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "idle_escalando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 97 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 83 ), ExtResource( 2 ), ExtResource( 39 ), ExtResource( 46 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 54 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 41 ), ExtResource( 21 ), ExtResource( 40 ), ExtResource( 38 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "baixant",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 111 ), ExtResource( 62 ), ExtResource( 102 ), ExtResource( 93 ), ExtResource( 84 ), ExtResource( 180 ), ExtResource( 90 ), ExtResource( 55 ), ExtResource( 136 ), ExtResource( 167 ), ExtResource( 75 ), ExtResource( 61 ), ExtResource( 56 ), ExtResource( 92 ), ExtResource( 72 ), ExtResource( 60 ), ExtResource( 52 ), ExtResource( 184 ), ExtResource( 162 ), ExtResource( 150 ) ],
+"loop": true,
+"name": "volte",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 94 ), ExtResource( 23 ), ExtResource( 112 ), ExtResource( 10 ), ExtResource( 45 ), ExtResource( 15 ), ExtResource( 34 ), ExtResource( 95 ) ],
+"loop": true,
+"name": "flying",
 "speed": 5.0
 } ]
 
@@ -360,7 +360,7 @@ position = Vector2( 0, -3.8147e-06 )
 scale = Vector2( 0.731884, 0.707792 )
 frames = SubResource( 6 )
 animation = "idle"
-frame = 2
+frame = 3
 speed_scale = 1.5
 playing = true
 [connection signal="animation_finished" from="main_char" to="." method="_on_main_char_animation_finished"]
