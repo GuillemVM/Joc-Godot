@@ -12,9 +12,7 @@ var attacking = false
 var death = false
 var direction = 1
 var grounded
-var attack_1 = true
-var attack_2 = false
-var attack_3 = false
+var attack = 1
 var q_ready = true
 
 func _ready():
@@ -67,17 +65,7 @@ func _physics_process(delta):
 		if q_ready == true:
 			if Input.get_action_strength("attack") && grounded == true:
 				attacking = true
-				if attack_1 == true:
-					first_attack()
-					q_ready = false
-					attack_1 = false
-				elif attack_1 == false:
-					if _animated_player.animation == "attack_1":
-						attack_2 = true
-						q_ready = false
-					if _animated_player.animation == "attack_2":
-						attack_3 = true
-						q_ready = false
+				first_attack()
 		moviment = move_and_slide(moviment, up)
 	elif death == true:
 		pass
