@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://main_node.gd" type="Script" id=1]
 [ext_resource path="res://personatge.tscn" type="PackedScene" id=2]
 [ext_resource path="res://tilemap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Area2D.tscn" type="PackedScene" id=4]
 
 [node name="main" type="Node"]
 script = ExtResource( 1 )
@@ -13,8 +14,11 @@ __meta__ = {
 [node name="Node2D" parent="." instance=ExtResource( 3 )]
 
 [node name="personatge" parent="." instance=ExtResource( 2 )]
-position = Vector2( 111.623, 172.807 )
+position = Vector2( 81.164, 502.986 )
 
 [node name="Camera2D" type="Camera2D" parent="personatge"]
 current = true
 zoom = Vector2( 0.5, 0.5 )
+
+[node name="Area2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 976.727, 524.105 )
